@@ -1,0 +1,18 @@
+ERROR Thu Mar 21 12:57:03 IST 2024 withdrawTransaction null
+ERROR Thu Mar 21 12:57:39 IST 2024 withdrawTransaction null
+INFO Thu Mar 21 12:58:37 IST 2024 withdrawTransaction
+ERROR Thu Mar 21 14:20:14 IST 2024 withdrawTransaction 500 Minimum balance Needed
+ERROR Thu Mar 21 14:39:42 IST 2024 withdrawTransaction 500 Minimum balance Needed
+ERROR Thu Mar 21 14:41:47 IST 2024 withdrawTransaction 500 Minimum balance Needed
+ERROR Thu Mar 21 14:43:41 IST 2024 withdrawTransaction 500 Minimum balance Needed
+ERROR Thu Mar 21 14:47:21 IST 2024 withdrawTransaction Account Not found with number   1
+ERROR Thu Mar 21 17:15:58 IST 2024 withdrawTransaction Account Not found with number   1
+ERROR Thu Mar 21 17:16:12 IST 2024 withdrawTransaction 500 Minimum balance Needed
+ERROR Fri Mar 22 09:59:07 IST 2024 depositTransaction Account Not found with number   2
+ERROR Fri Mar 22 17:17:44 IST 2024 null
+ERROR Fri Mar 22 17:19:28 IST 2024 null
+ERROR Fri Mar 22 17:21:28 IST 2024 null
+ERROR Fri Mar 22 17:21:58 IST 2024 null
+ERROR Fri Mar 22 17:22:29 IST 2024 null
+ERROR Fri Mar 22 17:23:43 IST 2024 acceptAccountDetails java.base/java.util.Scanner.throwFor(Scanner.java:939)java.base/java.util.Scanner.next(Scanner.java:1594)java.base/java.util.Scanner.nextFloat(Scanner.java:2496)com.vwits.bankapp.view.impl.AccountConsoleView.acceptAccountDetails(AccountConsoleView.java:50)TestAccount.main(TestAccount.java:131)
+ERROR Fri Mar 22 17:25:00 IST 2024 acceptAccountDetails java.base/java.util.Scanner.throwFor(Scanner.java:939)     java.base/java.util.Scanner.next(Scanner.java:1594)     java.base/java.util.Scanner.nextFloat(Scanner.java:2496)     com.vwits.bankapp.view.impl.AccountConsoleView.acceptAccountDetails(AccountConsoleView.java:50)     TestAccount.main(TestAccount.java:131)     
