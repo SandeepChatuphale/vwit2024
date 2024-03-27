@@ -1,0 +1,151 @@
+One of the renowned bank wants their process to be automated which includes storing information of Customer and their respective Account
+
+1) Software should be able to maintain Account details which includes
+	accountNumber:int
+	balance:float
+	owner:String
+	openingDate:LocalDate (Format of Date : - dd/MM/yyyy)
+
+2) Account is capable of following operations
+	withdraw(float amount): boolean
+	deposit(float amout): boolean
+
+3) Client wants new feature that system should be able to take input from the user.
+balance and owner MUST be taken as I/P from user.
+	balance - MUST NOT less that 500
+	owner- MUST NOT be blank, minLength=6,maxLength=15
+If validation fails error MUST be shown
+Make sure to create seperate classes for Validation. (e.g. IntValidator,StringValidator)
+
+
+4) Client wants new feature that system should be able to 
+Make sure accountNumber is automatically incremented by application.
+Make sure openingDate is automatically assigned.
+
+
+5) Client wants new feature that system should be able to store,retrieve,update,delete details of specific account based on I/P
+
+
+6) Make sure that system should be capable of changing type of O/P (ConsoleView,PdfView) at runtime based on runtime configuration.
+
+7) Create a view Layer and show all business operations to end user. 
+Make sure that entity class is NOT accessed in VIEW Layer of the application.
+
+
+8) Make sure that layers are NOT tightly coupled.
+
+9) Client wants new feature that system should be capable of performing following business operation - 
+
+	withdrawTransaction(float amount,int accountNumber):boolean
+	
+	Make sure that if account with given number NOT found an exception is thrown - AccountNotFoundException
+	Make sure that if account has less that 500 balance an exception is thrown - LowBalanceException
+	If withdraw is successful appropriate balance is maintained and an email MUST be sent to owner (dummy implementation)
+
+
+
+10) Client wants new feature that system should be capable of performing following business operation - 
+	depositTransaction(float amount,int accountNumber):boolean	
+	Make sure that if account with given number NOT found an exception is thrown - AccountNotFoundException
+	If withdraw is successful appropriate balance is maintained and an email MUST be sent to owner  (dummy implementation)
+
+
+11)  Client wants new feature that system should be capable of performing following business operation - 
+	transferFund(int fromAccountNumber,int toAccountNumber,float amount):boolean	
+	Make sure that if account with given number NOT found an exception is thrown - AccountNotFoundException
+	Make sure that if account has less that 500 balance an exception is thrown - LowBalanceException
+	If operation is successful appropriate balance is maintained and an email MUST be sent to owners  (dummy implementation)
+
+
+12)  Client wants new feature that system should be capable of performing following business operation - 
+	openAccount(Account a):Account
+	If operation is successful then an email MUST be sent to owner  (dummy implementation)
+
+
+
+13)  Client wants new feature that system should be capable of performing following business operation - 
+	closeAccount(Account a):void
+	If operation is successful then delete account from DataStore
+	an email MUST be sent to owner   (dummy implementation)
+
+
+14) Client asked us to add new feature to release offers to all bank accounts based on condition passed at runtime
+	e.g. Releasing offers for credit card by sending an email to accounts maintaining balance > 10000
+	 (dummy implementation) for sending email
+	
+
+15) Client asked us to add new feature to fetch all accounts who are eligible for specific offer based on condition passed at runtime.
+	e.g. Find All Accounts older than 10 years
+
+
+16) Client wants following new feature in application
+	Bank app should be able to find total balance of all the cutomers as it is registered with bank.
+	For lending loan
+	ONLY ADMIN has access to this feature
+
+17) Client wants new feature
+	Application should be able to find email address of all Customers maintaining balance greater than 50000.
+	ONLY ADMIN has access to this feature
+
+18) Client wants new feature
+	Application should be able to find email address of all Customers if the account is opened in last 15 days.
+	ONLY ADMIN has access to this feature
+
+19) Client wants new feature
+	Application should be able to sort accounts based of different business requirements
+	e.g. ascending order based on balance,
+	      descending order based on balance,
+	      ascending order based on owner	
+
+	
+==============================================================================================
+
+20)  Software should be able to maintain Customer details which includes
+	email:String
+	password:String
+	roles:List<String>
+
+21) Make sure that for email and password I/P MUST be taken from User.
+
+
+22) Make sure that -
+	email - MUST NOT be blank, minLength=6,maxLength=15
+	password - MUST NOT be blank, minLength=6,maxLength=15
+	roles - MUST hard coded (USER,ADMIN)
+If validation fails error MUST be shown
+Make sure to create seperate classes for Validation. (e.g. IntValidator,StringValidator)
+
+
+23) Write a method in Dao Layer to find Customer based on email
+	findByEmail(String email):Optional<Customer>
+
+24) Write a method in CustomerServiceImpl class loadUserByUsername(String email) which returns Customer Object 
+	loadUserByUsername(String email):Customer 
+	Make sure if email is NOT found then it throws UsernameNotFoundException
+
+25)  Client wants new feature that system should be capable of performing following operation -
+	authenticate(Customer c):Customer 
+	make sure if authentication fails it throws AuthenticationFailureException
+
+26) Write a method in Dao Layer to Save Customer Object
+	save(Customer c):Customer
+
+27)  Client wants new feature that system should be capable of performing following business operation -
+	registerNewCustomer(Customer c):Customer
+
+
+==============================================================================================
+
+28) Update already written Account class in such a way that Account and its owner customer are related
+
+	accountNumber:int
+	balance:float
+	openingDate:LocalDate
+	owner:Customer
+
+
+29) Modify business Layer using modification done in Account in question number 28.
+
+30) Client wants following new feature in application
+	Application should show current date to end user in home page
+	Format of Date : - dd/MM/yyyy
